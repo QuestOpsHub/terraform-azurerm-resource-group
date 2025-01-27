@@ -2,7 +2,7 @@
 # Random String
 #---------------
 module "random_string" {
-  source = "git@github.com:QuestOpsHub/terraform-azurerm-random-string.git?ref=v1.0.0"
+  source = "git::https://github.com/QuestOpsHub/terraform-azurerm-random-string.git?ref=v1.0.0"
 
   length  = 4
   lower   = true
@@ -15,7 +15,7 @@ module "random_string" {
 # Resource Group
 #----------------
 module "resource_group" {
-  source = "git@github.com:QuestOpsHub/terraform-azurerm-resource-group.git?ref=v1.0.2"
+  source = "git::https://github.com/QuestOpsHub/terraform-azurerm-resource-group.git?ref=v1.0.0"
 
   name     = "rg-${local.resource_suffix}-${module.random_string.result}"
   location = "centralus"
